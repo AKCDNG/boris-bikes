@@ -6,7 +6,7 @@ describe DockingStation do
   it { is_expected.to respond_to :release_bike }
 
   it "Gets a bike and checks it's working" do
-    bike = subject.release_bike
+    bike = Bike.new
     expect(bike.working?).to eq(true)
   end
 
@@ -17,4 +17,9 @@ describe DockingStation do
     subject.dock_bike(bike)
     expect(subject.bike).to eq(bike)
   end
+
+  it "raise an error if trying to release a bike when none" do
+    expect{subject.release_bike}.to raise_error ('WRONG!!')
+  end
+
 end
