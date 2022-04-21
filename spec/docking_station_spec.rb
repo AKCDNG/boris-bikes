@@ -10,9 +10,5 @@ describe DockingStation do
     expect(bike.working?).to eq(true)
   end
 
-  it "verifies dock_bike method" do
-    bike = Bike.new
-    expect{subject.dock_bike(bike)}.not_to raise_error
-  end
-
+  it { is_expected.to respond_to(:dock_bike).with(1).argument}
 end
