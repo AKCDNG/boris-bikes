@@ -11,4 +11,10 @@ describe DockingStation do
   end
 
   it { is_expected.to respond_to(:dock_bike).with(1).argument}
+
+  it "access array of bikes in docking station" do
+    bike = Bike.new
+    subject.dock_bike(bike)
+    expect(subject.bike).to eq(bike)
+  end
 end
