@@ -8,8 +8,11 @@ describe DockingStation do
   it "Gets a bike and checks it's working" do
     bike = subject.release_bike
     expect(bike.working?).to eq(true)
-  
-  it "docks bike" do
-    expect(subject.dock_bike).to eq(true)
   end
+
+  it "verifies dock_bike method" do
+    bike = Bike.new
+    expect{subject.dock_bike(bike)}.not_to raise_error
+  end
+
 end
