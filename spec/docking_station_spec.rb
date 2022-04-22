@@ -29,8 +29,4 @@ describe DockingStation do
   it "default capacity is 20" do
     expect(DockingStation.new.capacity).to eq(20)
   end
-
-  it { is_expected.to respond_to(:report) }
-
-  it { is_expected.to respond_to(:report).with(1).argument}
 end

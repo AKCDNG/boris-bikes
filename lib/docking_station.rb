@@ -21,9 +21,6 @@ class DockingStation
     bikes << bike
   end
 
-  def report(bike)
-  end
-
   private
 
   attr_reader :bikes
