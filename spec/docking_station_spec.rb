@@ -31,4 +31,6 @@ describe DockingStation do
   end
 
   it { is_expected.to respond_to(:report) }
+
+  it { is_expected.to respond_to(:report).with(1).argument}
 end
