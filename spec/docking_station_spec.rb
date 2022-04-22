@@ -30,4 +30,5 @@ describe DockingStation do
     expect(DockingStation.new.capacity).to eq(20)
   end
 
+  it { is_expected.to respond_to(:report) }
 end
